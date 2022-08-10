@@ -1,10 +1,16 @@
 /* COMMON */
 body {
-  
+  height: 2000px;
 }
 
 a {
   text-decoration: none;
+}
+
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
 }
 
 
@@ -15,10 +21,7 @@ a {
   height: 120px;
 }
 
-.container .inner {
-  position: relative;
-  margin: 0 auto;
-  width: 1100px;
+.container > .inner {
   height: 120px;
 }
 
@@ -91,14 +94,60 @@ a {
   margin: auto 0;
 }
 
-.container .item {
+.container .main-menu {
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.container .main-menu .item {
+}
+
+.container .main-menu .item .item__name {
+  padding: 20px;
+  font-size: 13px;
+  border-radius: 10px 10px 0 0;
+}
+.container .main-menu .item:hover .item__name {
+  background-color: #2c2a29;
+  color:#669900;
+}
+
+.container .main-menu .item .item__section {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  display: none;
+}
+
+.container .main-menu .item:hover .item__section {
+  display: block;
+}
+
+.container .main-menu .item .item__section .section__contents { 
+  background-color: #2c2a29;
+}
+
+.container .main-menu .item .item__section .section__contents .title { 
+  display: flex;
+  padding: 20px 0;
 
 }
 
-.container .item .item__name {
-
+.container .main-menu .item .item__section .section__contents .title > li { 
+  width: 220px;
 }
 
-.container .item .item__section {
+.container .main-menu .item .item__section .section__contents .title > li h4 { 
+  font-size: 14px;
+  color:#fff;
+  padding: 3px 0 12px 0;
+}
 
+.container .main-menu .item .item__section .section__contents .title > li ul li { 
+  padding: 5px 0;
+  color: #999;
+  font-size: 12px;
+  cursor: pointer;
 }
